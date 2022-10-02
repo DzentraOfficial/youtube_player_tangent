@@ -47,7 +47,7 @@ class YoutubePlayerValue {
     return '$runtimeType('
         'metaData: ${metaData.toString()}, '
         'playerState: $playerState, '
-        'playbackRate: $playbackRate, '
+        // 'playbackRate: $playbackRate, '
         'playbackQuality: $playbackQuality, '
         'isFullScreen: ${fullScreenOption.enabled}, '
         'error: $error)';
