@@ -47,7 +47,7 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player("player", {
-          // host: host,
+          host: host,
           playerVars: <<playerVars>>,
           events: {
             onReady: function (event) {
@@ -73,7 +73,7 @@
         });
         player.setSize(window.innerWidth, window.innerHeight);
       }
-
+      document.getElementsByTagName('iframe')[0].contentWindow.getElementsByClassName('ytp-watch-later-button')[0].style.display = 'none';
       window.addEventListener('message', (event) => {
         try {
           var data = JSON.parse(event.data);
@@ -119,9 +119,9 @@
         return prepareDataForPlatform(player.getVideoData());
       }
 
-      // function getPlaylist() {
-      //   return prepareDataForPlatform(player.getPlaylist());
-      // }
+      function getPlaylist() {
+        return prepareDataForPlatform(player.getPlaylist());
+      }
 
       function getAvailablePlaybackRates(){
         return prepareDataForPlatform(player.getAvailablePlaybackRates());
