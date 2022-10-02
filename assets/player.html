@@ -47,7 +47,7 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player("player", {
-          host: host,
+          // host: host,
           playerVars: <<playerVars>>,
           events: {
             onReady: function (event) {
@@ -119,9 +119,9 @@
         return prepareDataForPlatform(player.getVideoData());
       }
 
-      function getPlaylist() {
-        return prepareDataForPlatform(player.getPlaylist());
-      }
+      // function getPlaylist() {
+      //   return prepareDataForPlatform(player.getPlaylist());
+      // }
 
       function getAvailablePlaybackRates(){
         return prepareDataForPlatform(player.getAvailablePlaybackRates());
