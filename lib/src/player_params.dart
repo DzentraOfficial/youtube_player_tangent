@@ -148,7 +148,7 @@ class YoutubePlayerParams {
   /// Creates [Map] representation of [YoutubePlayerParams].
   Map<String, dynamic> toMap() {
     return {
-      'autoplay': 1,
+      'autoplay': 0,
       'mute': _boolean(mute),
       'cc_lang_pref': captionLanguage,
       'cc_load_policy': _boolean(enableCaption),
